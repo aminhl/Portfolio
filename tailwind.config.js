@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: "class",
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
@@ -14,6 +15,9 @@ module.exports = {
       },
       fontFamily: {
         burtons: "burtons",
+      },
+      fontSize: {
+        md: "1.125rem", // 18px
       },
     },
   },
