@@ -11,10 +11,10 @@ import nh from "../public/nh-wave.png";
 import design from "../public/design.png";
 import code from "../public/code.png";
 import consulting from "../public/consulting.png";
-import web1 from "../public/web1.png";
-import web2 from "../public/web2.png";
-import web4 from "../public/web4.png";
-import web6 from "../public/web6.png";
+import nikeStore from "../public/nikeStore.png";
+import lyriks from "../public/lyriks.png";
+import resupply from "../public/resupply.png";
+import movix from "../public/movix.png";
 import {
   FaJava,
   FaReact,
@@ -23,6 +23,7 @@ import {
   FaSass,
   FaHtml5,
   FaBootstrap,
+  FaDocker,
 } from "react-icons/fa";
 import {
   SiTypescript,
@@ -32,6 +33,7 @@ import {
   SiJavascript,
   SiCss3,
 } from "react-icons/si";
+import { FcLinux } from "react-icons/fc";
 import { useState } from "react";
 
 export default function Home() {
@@ -193,7 +195,7 @@ export default function Home() {
                 width={"100%"}
                 height={"100%"}
                 layout="responsive"
-                src={web1}
+                src={nikeStore}
               />
             </div>
             <div className="basis-1/3 flex-1">
@@ -202,7 +204,7 @@ export default function Home() {
                 width={"100%"}
                 height={"100%"}
                 layout="responsive"
-                src={web2}
+                src={resupply}
               />
             </div>
             <div className="basis-1/3 flex-1">
@@ -211,21 +213,21 @@ export default function Home() {
                 width={"100%"}
                 height={"100%"}
                 layout="responsive"
-                src={web4}
+                src={lyriks}
               />
             </div>
             <div className="basis-1/3 flex-1 overflow-hidden">
               <Image
                 className="rounded-lg object-cover"
                 width={"100%"}
-                height={"100%"}
+                height="1080"
                 layout="responsive"
-                src={web6}
+                src={movix}
               />
             </div>
           </div>
         </section>
-        <section className="py-10 grid grid-cols-7 gap-8">
+        <section className="py-10 flex justify-between flex-wrap gap-8">
           <div className="p-4 rounded-lg border-2 border-gray-700">
             <FaHtml5 size={100} color="#DD4B25" />
           </div>
@@ -267,6 +269,12 @@ export default function Home() {
           </div>
           <div className="p-4 rounded-lg border-2 border-gray-700">
             <AiFillGithub size={100} color="" />
+          </div>
+          <div className="p-4 rounded-lg border-2 border-gray-700">
+            <FcLinux size={100} color="" />
+          </div>
+          <div className="p-4 rounded-lg border-2 border-gray-700">
+            <FaDocker size={100} color="#2391E6" />
           </div>
         </section>
       </main>
