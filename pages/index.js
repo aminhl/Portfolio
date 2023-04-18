@@ -1,6 +1,11 @@
 import Head from "next/head";
 import { BsFillMoonStarsFill, BsStackOverflow } from "react-icons/bs";
-import { AiFillTwitterCircle, AiFillLinkedin } from "react-icons/ai";
+import {
+  AiFillTwitterCircle,
+  AiFillLinkedin,
+  AiFillGithub,
+} from "react-icons/ai";
+import { MdLightMode } from "react-icons/md";
 import Image from "next/image";
 import nh from "../public/nh-wave.png";
 import design from "../public/design.png";
@@ -10,10 +15,28 @@ import web1 from "../public/web1.png";
 import web2 from "../public/web2.png";
 import web4 from "../public/web4.png";
 import web6 from "../public/web6.png";
+import {
+  FaJava,
+  FaReact,
+  FaAngular,
+  FaNodeJs,
+  FaSass,
+  FaHtml5,
+  FaBootstrap,
+} from "react-icons/fa";
+import {
+  SiTypescript,
+  SiGraphql,
+  SiSpring,
+  SiTailwindcss,
+  SiJavascript,
+  SiCss3,
+} from "react-icons/si";
 import { useState } from "react";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(true);
+  const [darkModeIcon, setDarkModeIcon] = useState(true);
   return (
     <div className={darkMode ? "dark" : ""}>
       <Head>
@@ -30,10 +53,23 @@ export default function Home() {
             </h1>
             <ul className="flex items-center">
               <li>
-                <BsFillMoonStarsFill
-                  onClick={() => setDarkMode(!darkMode)}
-                  className="cursor-pointer text-2xl dark:text-gray-200"
-                />
+                {darkModeIcon ? (
+                  <MdLightMode
+                    onClick={() => {
+                      setDarkMode(!darkMode);
+                      setDarkModeIcon(!darkModeIcon);
+                    }}
+                    className="cursor-pointer text-2xl dark:text-gray-200"
+                  />
+                ) : (
+                  <BsFillMoonStarsFill
+                    onClick={() => {
+                      setDarkMode(!darkMode);
+                      setDarkModeIcon(!darkModeIcon);
+                    }}
+                    className="cursor-pointer text-2xl dark:text-gray-200"
+                  />
+                )}
               </li>
               <li>
                 <a
@@ -46,7 +82,7 @@ export default function Home() {
             </ul>
           </nav>
           <div className="text-center p-10">
-            <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl">
+            <h2 className="text-5xl py-2 text-teal-500 font-medium md:text-6xl">
               Amin Hlel
             </h2>
             <h3 className="text-2xl py-2 md:text-3xl dark:text-white">
@@ -57,7 +93,7 @@ export default function Home() {
               below and let's get cracking!
             </p>
           </div>
-          <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
+          <div className="text-5xl flex justify-center gap-16 py-3 text-gray-1000 dark:text-gray-400">
             <a href="https://twitter.com/AminHlel" target="_blank">
               <AiFillTwitterCircle />
             </a>
@@ -102,7 +138,7 @@ export default function Home() {
               <h3 className="text-lg font-medium pt-8 pb-2 text-teal-500">
                 Beautiful Designs
               </h3>
-              <p className="py-2 text-gray-200">
+              <p className="py-2 text-gray-800 dark:text-gray-200">
                 Creating elegant designs suited for your needs following core
                 design theory.
               </p>
@@ -112,7 +148,7 @@ export default function Home() {
               <h3 className="text-lg font-medium pt-8 pb-2 text-teal-500">
                 Code your dream project
               </h3>
-              <p className="py-2 text-gray-200">
+              <p className="py-2 text-gray-800 dark:text-gray-200">
                 Do you have an idea for your next great website? Let's make it a
                 reality.
               </p>
@@ -127,7 +163,7 @@ export default function Home() {
               <h3 className="text-lg font-medium pt-8 pb-2 text-teal-500">
                 Consulting
               </h3>
-              <p className="py-2 text-gray-200">
+              <p className="py-2 text-gray-800 dark:text-gray-200">
                 Are you interested in feedback for your current project? I can
                 give you tips and tricks to level it up.
               </p>
@@ -189,8 +225,52 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <section className="py-10 grid grid-cols-7 gap-8">
+          <div className="p-4 rounded-lg border-2 border-gray-700">
+            <FaHtml5 size={100} color="#DD4B25" />
+          </div>
+          <div className="p-4 rounded-lg border-2 border-gray-700">
+            <SiCss3 size={100} color="#146EB1" />
+          </div>
+          <div className="p-4 rounded-lg border-2 border-gray-700">
+            <FaSass size={100} color="#C96195" />
+          </div>
+          <div className="p-4 rounded-lg border-2 border-gray-700">
+            <SiTailwindcss size={100} color="#07B0CE" />
+          </div>
+          <div className="p-4 rounded-lg border-2 border-gray-700">
+            <FaBootstrap size={100} color="#8411F6" />
+          </div>
+          <div className="p-4 rounded-lg border-2 border-gray-700">
+            <SiJavascript size={100} color="#E8D44D" />
+          </div>
+          <div className="p-4 rounded-lg border-2 border-gray-700">
+            <FaJava size={100} color="#0C85C2" />
+          </div>
+          <div className="p-4 rounded-lg border-2 border-gray-700">
+            <SiTypescript size={100} color="#1573C1" />
+          </div>
+          <div className="p-4 rounded-lg border-2 border-gray-700">
+            <FaReact size={100} color="#00D1F7" />
+          </div>
+          <div className="p-4 rounded-lg border-2 border-gray-700">
+            <FaAngular size={100} color="#BD002E" />
+          </div>
+          <div className="p-4 rounded-lg border-2 border-gray-700">
+            <SiSpring size={100} color="#6AAD3D" />
+          </div>
+          <div className="p-4 rounded-lg border-2 border-gray-700">
+            <FaNodeJs size={100} color="#7DBB45" />
+          </div>
+          <div className="p-4 rounded-lg border-2 border-gray-700">
+            <SiGraphql size={100} color="#EE0097" />
+          </div>
+          <div className="p-4 rounded-lg border-2 border-gray-700">
+            <AiFillGithub size={100} color="" />
+          </div>
+        </section>
       </main>
-      <footer className="text-center py-10 dark:bg-gray-800 dark:text-gray-200">
+      <footer className="text-center py-10 bg-gray-100 dark:bg-gray-800 dark:text-gray-200">
         <h3 className="text-3xl md:text-2xl text-teal-500 pb-2">AminHlel</h3>
         <h4 className="text-2xl md:text-xl">
           © 2023 All right reserved - Amin Hlel
