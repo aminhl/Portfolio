@@ -10,7 +10,7 @@ import Image from "next/image";
 import nh from "../public/nh-wave.png";
 import design from "../public/design.png";
 import code from "../public/code.png";
-import nikeStore from "../public/nikeStore.png";
+import nikeStore from "../public/nikestore.png";
 import lyriks from "../public/lyriks.png";
 import resupply from "../public/resupply.png";
 import movix from "../public/movix.png";
