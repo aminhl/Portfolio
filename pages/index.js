@@ -115,7 +115,7 @@ export default function Home() {
                 </h3>
                 <p className="text-md py-5 leading-8 text-gray-800 md:text-xl max-w-xl mx-auto dark:text-gray-200">
                   As a software engineering student and freelancer. Join me down
-                  below and let's get cracking!
+                  below and lets get cracking!
                 </p>
               </div>
               <div className="text-5xl flex justify-center gap-16 py-3 text-gray-800 dark:text-gray-400">
@@ -169,7 +169,7 @@ export default function Home() {
                     Code your dream project
                   </h3>
                   <p className="py-2 text-gray-800 dark:text-gray-200">
-                    Do you have an idea for your next great website? Let's make
+                    Do you have an idea for your next great website? Lets make
                     it a reality.
                   </p>
                 </div>
